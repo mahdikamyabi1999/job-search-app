@@ -3,7 +3,7 @@ import { BsHouseDoor } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 function Search() {
   return (
-    <div className="searchDiv grid gp-10 bg-gryIsh rounded-[10px] p-[3rem]">
+    <div className="searchDiv grid gap-10 bg-gryIsh rounded-[10px] p-[3rem]">
       <form action="">
         <div className="firstDiv flex justify-between items-center rounded-[8px] gap-[10px] bg-white p-5 shadow-lg shadow-gryIsh-700">
           <div className="flex gap-2 items-center">
@@ -13,7 +13,7 @@ function Search() {
               className=" bg-transparent text-blue-500 focus:outline-none w-[100%]"
               placeholder="Serch Job Here"
             />
-            <AiOutlineCloseCircle className="text-[30px] text-[#a5a6a6] hover:text-textColor icon" />
+            
           </div>
           <div className="flex gap-2 items-center">
             <BsHouseDoor className="text-[25px] icon " />
@@ -22,7 +22,7 @@ function Search() {
               className=" bg-transparent text-blue-500 focus:outline-none w-[100%]"
               placeholder="Serch By company"
             />
-            <AiOutlineCloseCircle className="text-[30px] text-[#a5a6a6] hover:text-textColor icon" />
+            
           </div>
           <div className="flex gap-2 items-center">
             <CiLocationOn className="text-[25px] icon " />
@@ -31,7 +31,7 @@ function Search() {
               className=" bg-transparent text-blue-500 focus:outline-none w-[100%]"
               placeholder="Serch By Location"
             />
-            <AiOutlineCloseCircle className="text-[30px] text-[#a5a6a6] hover:text-textColor icon" />
+            
           </div>
           <button className=" bg-blueColor h-full p-5 px-10 hover:bg-blue-300 rounded-[10px] text-white">
             Serach
@@ -58,7 +58,39 @@ function Search() {
           <option value="">Contains</option>
         </select>
         </div>
+      <div className="singlesearch flex items-center gap-2">
+        <label htmlFor="level" className="text-[#808080] font-semibold">
+          Level:
+        </label>
+        <select
+          name=""
+          id="level"
+          className="bg-white rounded-[3px] px-4 py-1"
+        >
+          <option value="">Senior</option>
+          <option value="">Beginner</option>
+          <option value="">Intermidiate</option>
+          <option value="">Advocate</option>
+        </select>
+        </div>
+      <div className="singlesearch flex items-center gap-2">
+        <label htmlFor="type" className="text-[#808080] font-semibold">
+          Type:
+        </label>
+        <select
+          name=""
+          id="type"
+          className="bg-white rounded-[3px] px-4 py-1"
+        >
+          <option value="">Full-time</option>
+          <option value="">Remote</option>
+          <option value="">Contract</option>
+          <option value="">Part-time</option>
+        </select>
+        </div>
+        <span className="text-[#a1a1a1] cursor-pointer">Clear All</span>
       </div>
+      
     </div>
   );
 }
